@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RentEasy — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="logo.png" alt="RentEasy logo" class="logo-img" />
+    <h1 class="logo">RentEasy</h1>
+  </div>
+  <nav>
+    <a href="add-item.html" class="btn">Add Item</a>
+    <a href="admin.html" class="btn muted">Admin</a>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="items-box">
+    <h2>Available Items</h2>
+
+    <div class="filters">
+      <input id="search" class="input" placeholder="Search items..." />
+      <select id="sort" class="input">
+        <option value="newest">Newest</option>
+        <option value="price-asc">Price Low → High</option>
+        <option value="price-desc">Price High → Low</option>
+      </select>
+      <button id="clear-filters" class="small-btn">Clear</button>
+    </div>
+
+    <div id="items-list" class="grid"></div>
+    <p id="no-items" class="muted" style="display:none">No items found</p>
+  </section>
+
+  <aside class="bookings-box">
+    <h2>Your Orders / Bookings</h2>
+    <div id="transactions-list"></div>
+  </aside>
+</main>
+
+<!-- Buy Modal -->
+<div id="buy-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close" id="close-buy">×</button>
+    <h3>Buy Item</h3>
+    <p id="buy-item-title" class="modal-item-title"></p>
+
+    <label>Your Name
+      <input type="text" id="buyer-name" class="input" />
+    </label>
+
+    <label>Address
+      <input type="text" id="buyer-address" class="input" placeholder="House, Road, Area, City" />
+    </label>
+
+    <label>Phone Number
+      <input type="tel" id="buyer-phone" class="input" placeholder="01XXXXXXXXX" />
+    </label>
+
+    <p id="buy-summary" class="muted"></p>
+
+    <button id="confirm-buy" class="btn full">Confirm Purchase</button>
+  </div>
+</div>
+
+<!-- Rent Modal -->
+<div id="rent-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close" id="close-rent">×</button>
+    <h3>Rent Item</h3>
+    <p id="rent-item-title" class="modal-item-title"></p>
+
+    <label>Your Name
+      <input type="text" id="renter-name" class="input" />
+    </label>
+
+    <label>From
+      <input type="date" id="rent-from" class="input" />
+    </label>
+
+    <label>To
+      <input type="date" id="rent-to" class="input" />
+    </label>
+
+    <p id="rent-summary" class="muted"></p>
+
+    <button id="confirm-rent" class="btn full">Confirm Rent</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Built by [77th] — Home Page</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Add Item — RentEasy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="logo.png" alt="RentEasy logo" class="logo-img" />
+    <h1 class="logo">RentEasy</h1>
+  </div>
+  <a href="index.html" class="small-btn">← Back</a>
+</header>
+
+<section class="form-box">
+  <h2>Add / Edit Item</h2>
+  <form id="item-form">
+    <input type="hidden" id="item-id" />
+
+    <label>Title
+      <input type="text" id="item-title" class="input" required />
+    </label>
+
+    <label>Description
+      <textarea id="item-desc" class="input" rows="3"></textarea>
+    </label>
+
+    <label>Price per day (BDT)
+      <input type="number" id="item-price" class="input" required />
+    </label>
+
+    <label>Location
+      <select id="item-location" class="input">
+        <option>Dhaka</option>
+        <option>Chattogram</option>
+        <option>Sylhet</option>
+      </select>
+    </label>
+
+    <label>Image URLs (comma separated)
+      <input type="text" id="item-image" class="input"
+             placeholder="https://..., https://..." />
+    </label>
+
+    <label>Upload images
+      <input type="file" id="item-images-files" multiple accept="image/*" />
+    </label>
+
+    <div id="image-previews" class="preview-row"></div>
+
+    <button type="submit" class="btn full">Save Item</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <p>Built by [77th] — Add Item Page</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

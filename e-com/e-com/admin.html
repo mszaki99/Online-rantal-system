@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Panel — RentEasy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="logo.png" alt="RentEasy logo" class="logo-img" />
+    <h1 class="logo">RentEasy Admin</h1>
+  </div>
+  <a href="index.html" class="small-btn">← Back</a>
+</header>
+
+<section class="admin-box">
+
+  <div id="admin-login-box">
+    <p class="muted">Enter password </p>
+    <input type="password" id="admin-pass" class="input" placeholder="Password" />
+    <button id="admin-login" class="btn">Login</button>
+  </div>
+
+  <div id="admin-controls" style="display:none">
+    <h2>Items</h2>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="admin-items-body"></tbody>
+    </table>
+
+    <h2 style="margin-top:20px">Orders & Bookings</h2>
+    <div id="admin-transactions-list"></div>
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  <p>Built by [77th] — Admin Page</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
