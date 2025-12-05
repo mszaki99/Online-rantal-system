@@ -1,2 +1,3 @@
 # Online-rantal-system
-The primary purpose of an online rental system is to facilitate seamless transactions and communication between users and vendors.
+
+An "online rental project" is a web-based application designed to streamline the process of renting various items—such as houses, cars, or equipment—by connecting owners with customers digitally. It replaces manual, paper-based systems with an efficient, 24/7 accessible platform.
