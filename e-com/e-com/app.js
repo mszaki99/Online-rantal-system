@@ -147,7 +147,6 @@ function seedDemoItems() {
   setItems(demoProducts);
 }
 
-/* 👉 আগে seed, তারপর পেজ ইনিশিয়ালাইজ */
 seedDemoItems();
 
 /* --------------------------------------------------
@@ -166,7 +165,7 @@ function daysBetween(a, b) {
 -------------------------------------------------- */
 (function initHomePage() {
   const itemsList = document.getElementById("items-list");
-  if (!itemsList) return; // অন্য পেজ হলে স্কিপ
+  if (!itemsList) return;
 
   const noItems = document.getElementById("no-items");
   const search = document.getElementById("search");
